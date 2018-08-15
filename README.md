@@ -65,6 +65,13 @@ and needs to be built along with ceres_reprojection.cpp implementation.
 
 http://ceres-solver.org/installation.html
 
+And download ceres lib to:
+
+```
+$ cd $PROJECT_HOME/lib/ceres_reprojection_pybind/lib/external/ceres-solver
+$ git clone https://ceres-solver.googlesource.com/ceres-solver
+```
+
 ## Install Virtual Environment for Python
 
 ```
