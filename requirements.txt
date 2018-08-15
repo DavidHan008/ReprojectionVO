@@ -1,0 +1,8 @@
+matplotlib==2.2.2
+numpy==1.14.5
+pyquaternion==0.9.2
+scipy==1.1.0
+scikit-image==0.14.0
+scikit-learn==0.19.1
+opencv-python==3.4.2.17
+evo==1.0.4
