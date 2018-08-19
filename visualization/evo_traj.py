@@ -25,7 +25,7 @@ def merge_config(args):
     return args
 
 
-def launch():
+def launch(ground_truth_file, result_file):
     args = Namespace(align=False,
                      config=None,
                      correct_scale=False,
@@ -37,8 +37,7 @@ def launch():
                      no_warnings=False,
                      plot=True,
                      plot_mode='xyz',
-                     ref='logs/groundtruth.txt',
-                     # ref='logs/result_g2o.txt',
+                     ref=ground_truth_file,
                      save_as_bag=False,
                      save_as_kitti=False,
                      save_as_tum=False,
@@ -49,7 +48,7 @@ def launch():
                      t_max_diff=0.01,
                      t_offset=0.0,
                      # traj_files=['logs/result_ceres.txt', 'logs/result_g2o.txt'],
-                     traj_files=['logs/pos_results_ceres.txt', ],
+                     traj_files=[result_file],
                      transform_left=None,
                      transform_right=None,
                      verbose=True)

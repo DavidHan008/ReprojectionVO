@@ -70,15 +70,16 @@ while True:
 
 
 # Writing out pose results
-with open('logs/pos_results_ceres.txt', 'w') as f:
+result_file = 'logs/pos_results_ceres.txt'
+with open(result_file, 'w') as f:
     writer = csv.writer(f, delimiter=' ')
     writer.writerows(optimizer.result_ceres)
 
 # Visualize results with evo
 from visualization import evo_traj, evo_rpe, evo_ape
-evo_traj.launch()
-evo_rpe.launch()
-evo_ape.launch()
+evo_traj.launch(tum_dataset.ground_truth_file, result_file)
+evo_rpe.launch(tum_dataset.ground_truth_file, result_file)
+evo_ape.launch(tum_dataset.ground_truth_file, result_file)
 
 print('end')
 

@@ -25,7 +25,7 @@ def merge_config(args):
     return args
 
 
-def launch():
+def launch(ground_truth_file, result_file):
     args = Namespace(align=False,
                      all_pairs=False,
                      config=None,
@@ -34,7 +34,7 @@ def launch():
                      delta=1,
                      delta_tol=0.1,
                      delta_unit='f',
-                     est_file='logs/pos_results_ceres.txt',
+                     est_file=result_file,
                      no_warnings=False,
                      plot=True,
                      plot_colormap_max=None,
@@ -42,7 +42,7 @@ def launch():
                      plot_colormap_min=None,
                      plot_mode='xyz',
                      pose_relation='trans_part',
-                     ref_file='logs/groundtruth.txt',
+                     ref_file=ground_truth_file,
                      save_plot=None,
                      save_results='logs/evo_ape.zip',
                      serialize_plot=None,
